@@ -1,0 +1,127 @@
+:root {
+  /*--navbar-bg: #FDFBF7;*/
+  --footer-bg: #f1f1f1;
+  --text-color: #2C2C2C;
+
+}
+
+body.light-theme {
+  --navbar-bg: #FDFBF7;
+  --footer-bg: #f1f1f1;
+  --text-color: #2C2C2C;
+
+  --card-bg: #FFFFFF;
+  --card-border: #E5E7EB;
+  /*--btn-bg: #0078d7;*/
+
+  background: #FDFBF7;
+  color: #2C2C2C;
+}
+
+body.dark-theme {
+  --navbar-bg: #1F2937;
+  --footer-bg: #222;
+  --text-color: #f9f9f9;
+
+  --card-bg: #1e1e1e;
+  --card-border: #444;
+  /*--btn-bg: #0078d7;*/
+
+  background: #121212;
+  color: #f9f9f9;
+}
+
+
+/*body.light-theme {
+
+  --navbar-bg: #f1f1f1;
+
+  --footer-bg: #f1f1f1;
+
+  --text-color: #222;
+
+  background: #FDFBF7;
+
+  color: #222;
+
+}*/
+
+
+
+/*body.dark-theme {
+
+  --navbar-bg: #1F2937;
+
+  --footer-bg: #222;
+
+  --text-color: #f9f9f9;
+
+  background: #121212;
+
+  color: #f9f9f9;
+
+}*/
+
+
+
+
+
+/*body.light-theme {
+
+  background: #FDFBF7;
+
+  color: #222;
+
+}*/
+
+
+
+/*body.dark-theme {
+
+  background: #121212;
+
+  color: #f9f9f9;
+
+}*/
+
+
+/* Estilo para el botón de cambio de tema */
+button { 
+  margin-left: 10px;
+  padding: 5px 10px;
+  cursor: pointer;
+  background-color: var();
+}
+
+
+
+/*body.dark-theme {
+
+  --card-bg: #1e1e1e;
+
+  --card-border: #444;
+
+  --navbar-bg: #1F2937;
+
+  --text-color: #f9f9f9;
+
+  --btn-bg: #0078d7;
+
+}*/
+
+
+
+/*body.light-theme {
+
+  --card-bg: #FFFFFF;
+
+  --card-border: #E5E7EB;
+
+  --navbar-bg: #f1f1f1;
+
+  --text-color: #222;
+
+  --btn-bg: #0078d7;
+
+}*/
+
