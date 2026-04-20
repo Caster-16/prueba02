@@ -29,7 +29,7 @@ body.dark-theme {
   --card-bg: #1e1e1e;
   --card-border: #444;
   /*--btn-bg: #0078d7;*/
-  --border: #2C2C2C;
+  --border: #464646;
   --bg: #1F2937;
   background: #121212;
   color: #f9f9f9;
@@ -37,6 +37,16 @@ body.dark-theme {
   --btn-bg: #0078d7;
 }
 
+button { 
+  margin-left: 10px;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 16px;
+
+  border-color: var(--border);
+  background-color: var(--navbar-bg);
+  color: var(--text-color);
+}
 
 /*body.light-theme {
 
@@ -92,18 +102,8 @@ body.dark-theme {
 
 
 /* Estilo para el botón de cambio de tema */
-button { 
-  margin-left: 10px;
-  padding: 5px 10px;
-  cursor: pointer;
-  border-radius: 16px;
-  /*background-color: red;*/
-  color: var(--text-h)
-}
 
-button:hover{
-    background-color: rgb(62, 181, 149)/*var(--accent-bg);*/
-}
+
 
 /*body.dark-theme {
 

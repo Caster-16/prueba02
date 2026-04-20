@@ -21,7 +21,7 @@
   color: var(--text);
 
   /*color de fondo*/
-  background: var(--bg); /*contenedor interno*/
+  /*background: var(--bg); /*contenedor interno*/
   /*--bg-outer: #b70e36;*/
 
   font-synthesis: none;
@@ -74,10 +74,10 @@ body {
   background-color: var(--bg);
 }
 
-#root button {
+/*#root button {
   background-color: var(--code-bg);
   color: var(--text-h);
-}
+}*/
 
 .app {
   min-height: 100vh;
