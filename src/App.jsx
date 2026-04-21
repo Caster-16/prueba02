@@ -8,6 +8,7 @@ import Perfil from './pages/Perfil';
 import Head from "./components/Head";
 import "./styles/theme.css";
 import { ThemeProvider } from './context/ThemeContext';
+import Banner from './components/Banner';
 
 
 
@@ -22,10 +23,12 @@ function App() {
           <Navbar />
             <main>
               <Routes>
+                <Route path="/" element={<Banner />} />
                 <Route path="/perfil" element={<Perfil />} />
               </Routes>
             </main>
-            <Footer />
+          {/*<Banner />*/}
+          <Footer />
         </div>
       </Router>
     </ThemeProvider>

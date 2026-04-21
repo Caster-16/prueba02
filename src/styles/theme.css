@@ -37,7 +37,7 @@ body.dark-theme {
   --btn-bg: #0078d7;
 }
 
-button { 
+.theme-toggle { 
   margin-left: 10px;
   padding: 5px 10px;
   cursor: pointer;

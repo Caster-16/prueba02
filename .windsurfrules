@@ -1,0 +1,70 @@
+# Windsurf Rules - Agentes AI
+
+## Proyecto
+React 19.2.4 + Vite con React Router 7.14.1. Proyecto educativo sin TypeScript.
+
+## Comandos Clave
+- `npm run dev` - Desarrollo (Vite, puerto 5173)
+- `npm run build` - Producción
+- `npm run lint` - ESLint check
+- `npm run preview` - Preview build
+
+## Estructura
+```
+src/components/      # Componentes reutilizables con CSS dedicado
+src/context/        # Context API (ThemeContext con localStorage)
+src/pages/          # Páginas/vistas principales
+src/styles/         # CSS modularizado (theme.css, componente.css)
+```
+
+## Convenciones Críticas
+
+### Componentes
+- Archivo: PascalCase (ej: `Navbar.jsx`)
+- CSS: minúscula correspondiente (ej: `navbar.css`)
+- Estructura: Funcionales, sin tipos
+- Importar CSS siempre en el componente
+
+### Context & Hooks
+- `ThemeContext.jsx` proporciona `useTheme()` hook
+- Persistencia automática en localStorage
+- Clases aplicadas al `<body>`: `light-theme` o `dark-theme`
+
+### Routing
+- React Router v7 con `<Router>`, `<Routes>`, `<Route>`
+- Usar `<NavLink>` para navegación (aplica clase `active`)
+- Rutas existentes: `/`, `/productos`, `/servicios`, `/acerca`, `/perfil`
+
+### Estilos
+- Variables CSS en `theme.css` para temas
+- CSS local por componente en `styles/`
+- Importar: `import "./styles/nombrecomponente.css"`
+
+## Patrones
+
+### Nueva Página
+1. `src/pages/NombrePagina.jsx`
+2. `src/styles/nombrepage.css`
+3. Import en `App.jsx` y agregar `<Route>`
+
+### Nuevo Componente
+1. `src/components/NombreComponente.jsx`
+2. `src/styles/nombrecomponente.css`
+3. Importar CSS en el componente
+
+### Usar Tema
+```jsx
+import { useTheme } from "../context/ThemeContext";
+
+export default function MiComponente() {
+  const { theme, toggleTheme } = useTheme();
+  return <button onClick={toggleTheme}>Toggle</button>;
+}
+```
+
+## Notas
+- ESLint: Oxc (fast)
+- TypeScript: no configurado
+- React Compiler: disabled
+- HMR: enabled (cambios en vivo)
+- Rama actual: `banner-principal`
