@@ -1,0 +1,30 @@
+.titulo-card{
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    font-family: serif;
+}
+
+
+
+.cards-contenedor {
+    margin: 0 20px;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    
+
+}
+/*NOTA => PARA QUE UN BORDE SE VEA NECESITA : BORDER-WIDTH(GROSOR), BORDER-COLOR(COLOR) Y BORDER STYLE(TIPO)*/
+.card {
+
+    width: 18rem;
+    position: relative;
+    justify-content: space-between;
+
+    border-width: 2px;
+    border-style: solid;
+    border-color: #dbdbdb;
+    
+    background-color: #fdfaf7;
+}

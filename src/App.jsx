@@ -9,6 +9,7 @@ import Head from "./components/Head";
 import "./styles/theme.css";
 import { ThemeProvider } from './context/ThemeContext';
 import Banner from './components/Banner';
+import Cards from './components/Cards';
 
 
 
@@ -23,11 +24,18 @@ function App() {
           <Navbar />
             <main>
               <Routes>
-                <Route path="/" element={<Banner />} />
+                <Route 
+                  path="/" 
+                  element={
+                    <>
+                      <Banner />
+                      <Cards />
+                    </>
+                  }
+                />
                 <Route path="/perfil" element={<Perfil />} />
               </Routes>
             </main>
-          {/*<Banner />*/}
           <Footer />
         </div>
       </Router>
