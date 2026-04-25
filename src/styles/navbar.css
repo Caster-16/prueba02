@@ -8,32 +8,28 @@
   font-family: serif;
   font-size: medium;
   margin-top: auto;
-  padding: auto auto;
+  padding: 10px 20px;
   background: var(--navbar-bg);
   color: var(--text-color);
   flex-wrap: wrap;
   
 }
 
-/*.brand*/
-.nav-links a { /*para el color de los enlaces*/
+.nav-links .contenido a { /*para el color de los enlaces*/
+  
   color: var(--text-color);
   text-decoration: none;
+
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  
+  
+  
 }
 
-/*.logo {
-  /*font-size: 2rem;
-  align-items: center;
-}*/
 
-/*.brand {
-  font-size: 1.5rem; /*tamaño
-  font-weight: 700; /*negrita
-  font-family: serif;
-  text-decoration: none;
-  color: var(--text-color)
-}*/
-.nav-links { /*contenedor de los links*/
+.nav-links { /*contiene los links*/
   display: flex;
   gap: 14px;
   align-items: center;
@@ -44,6 +40,11 @@
   border-bottom: 2px solid var(--btn-bg);
 }
 
+/*lo puse para corregir la altura del icono con la del texto*/
+.contenido a svg {
+  position: relative;
+  top: -1px;
+}
 
 /*.perfil {
   color: var(--text-color);
