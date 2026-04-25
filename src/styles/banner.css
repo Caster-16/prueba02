@@ -28,7 +28,7 @@
   width: 100%;
   
   text-align: center;
-  z-index: 2;
+  z-index: 2; /*le asignamos un orden de capa*/
 }
 
 .banner-titulo {
@@ -51,7 +51,7 @@
   justify-content: center;
   gap: 12px;
   margin-top: auto;
-  z-index: 3;
+  z-index: 3; /*le asignamos un orden de capa*/
 }
 
 .banner-boton button {
@@ -75,11 +75,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 0;
+  z-index: 0; /*le asignamos un orden de capa*/
 }
 
 .overlay{
-    z-index: 1;
+    z-index: 1; /*le asignamos un orden de capa*/
 }
 
 

@@ -1,21 +1,25 @@
-.titulo-card{
-    color: white;
+.titulo-cards{
+    color: var(--text-color);
     font-size: 18px;
     font-weight: bold;
     font-family: serif;
+
+    text-align: left;
+    padding-left: 20px;
+    margin-top: 50px;
+    /*background-color: #b26d29;*/
 }
-
-
 
 .cards-contenedor {
     margin: 0 20px;
     display: flex;
     gap: 20px;
     justify-content: center;
+    /*background-color: aqua;*/
     
 
 }
-/*NOTA => PARA QUE UN BORDE SE VEA NECESITA : BORDER-WIDTH(GROSOR), BORDER-COLOR(COLOR) Y BORDER STYLE(TIPO)*/
+/*Recuerda: PARA QUE UN BORDE SE VEA NECESITA : BORDER-WIDTH(GROSOR), BORDER-COLOR(COLOR) Y BORDER STYLE(TIPO)*/
 .card {
 
     width: 18rem;
@@ -26,5 +30,34 @@
     border-style: solid;
     border-color: #dbdbdb;
     
-    background-color: #fdfaf7;
+    background-color: var(--card-bg);
+    border-color: var(--card-border);
+}
+
+.card-body {
+    height: 180px;
+}
+
+.card-body a {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+.card-icon {
+    font-size: 48px;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.2);
 }

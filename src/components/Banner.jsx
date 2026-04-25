@@ -4,10 +4,9 @@ import "../styles/banner.css";
 
 function Banner() {
     const imagenes = [ 
-        "/images/img1.jpg", 
-        "/images/img2.jpg", 
-        "/images/img3.jpg",
-        "/images/img4.jpg"
+        "/images/img1.png", 
+        "/images/img2.png", 
+        "/images/img3.png"
     ]; // contenedor de imágenes en public/images
 
     const [indice, setIndice] = useState(0); // el indice va cambiando y muestra otra imagen

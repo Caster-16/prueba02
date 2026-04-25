@@ -1,7 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-//import reactLogo from './assets/react.svg'
-//import viteLogo from './assets/vite.svg'
-//import heroImg from './assets/hero.png'
+
 import Footer from "./components/Footer";
 import Navbar from './components/Navbar';
 import Perfil from './pages/Perfil';
@@ -24,9 +22,7 @@ function App() {
           <Navbar />
             <main>
               <Routes>
-                <Route 
-                  path="/" 
-                  element={
+                <Route path="/" element={
                     <>
                       <Banner />
                       <Cards />
