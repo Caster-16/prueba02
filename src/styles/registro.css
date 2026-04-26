@@ -1,0 +1,103 @@
+.registro-fondo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: var(--bg-app);
+  font-family: sans-serif;
+}
+
+.registro-tarjeta {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  width: 380px;
+}
+
+.registro-titulo {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.registro-grupo {
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.registro-grupo label {
+  margin-bottom: 5px;
+  font-weight: bold;
+  font-size: 14px;
+  color: #555;
+}
+
+.registro-input {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.registro-boton-principal {
+  width: 100%;
+  padding: 12px;
+  background-color: #28a745; /* Verde para diferenciarlo del login */
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 10px;
+  transition: background 0.3s ease;
+}
+
+.registro-boton-principal:hover:not(:disabled) {
+  background-color: #218838;
+}
+
+.registro-boton-principal:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.registro-alerta {
+  color: white;
+  background-color: #e74c3c;
+  padding: 8px;
+  border-radius: 5px;
+  font-size: 13px;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.registro-exito {
+  color: white;
+  background-color: #28a745;
+  padding: 8px;
+  border-radius: 5px;
+  font-size: 13px;
+  text-align: center;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.registro-enlace {
+  text-align: center;
+  margin-top: 15px;
+  color: #666;
+  font-size: 14px;
+}
+
+.registro-link-sesion {
+  color: #a36666;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.registro-link-sesion:hover {
+  text-decoration: underline;
+}

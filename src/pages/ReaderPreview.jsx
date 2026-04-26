@@ -1,7 +1,8 @@
 import { useParams, useNavigate } from "react-router-dom";
 import { books } from "../data/books";
-import Header from "../components/Header";
+import { FiArrowLeftCircle } from "react-icons/fi";
 import Footer from "../components/Footer";
+import { FaBookOpen } from "react-icons/fa";
 import "../styles/reader.css";
 
 function ReaderPreview() {
@@ -13,16 +14,16 @@ function ReaderPreview() {
 
   return (
     <div className="results-page-wrapper">
-      <Header />
       
-      <main className="book-detail-main" style={{ maxWidth: '900px', margin: '0 auto' }}>
-        <div className="reader-nav-header" style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '30px' }}>
+      <main className="book-detail-main">
+        <div className="reader-nav-header">
           <button className="btn-back-link" onClick={() => navigate(-1)}>
-            ← Volver a la biblioteca
+            <FiArrowLeftCircle />
+             Volver a la biblioteca
           </button>
         </div>
 
-        <div className="reader-layout" style={{ display: 'grid', gridTemplateColumns: '250px 1fr', gap: '40px' }}>
+        <div className="reader-layout">
           <div className="detail-cover-container">
             <img src={libro.img} alt={libro.titulo} style={{ width: '100%', borderRadius: '15px' }} />
           </div>
@@ -45,15 +46,15 @@ function ReaderPreview() {
 
             <div className="continue-reading-card">
                <div className="banner-text">
-                  <span style={{ fontSize: '24px' }}>📖</span>
+                  <FaBookOpen />
                   <div>
-                    <h4 style={{ margin: 0 }}>¿Quieres continuar leyendo?</h4>
-                    <p style={{ margin: 0, fontSize: '13px', color: '#666' }}>Haz clic para ir a la versión completa.</p>
+                    <h4>¿Quieres continuar leyendo?</h4>
+                    <p>Haz clic para ir a la versión completa.</p>
                   </div>
                </div>
-               <a href={libro.linkCompleto} target="_blank" rel="noreferrer" className="btn-read-now" style={{ textDecoration: 'none' }}>
+               <button className="btn-read-now" onClick={() => navigate(`/tienda/${id}`)}>
                   Para continuar leyendo haz click aquí
-               </a>
+              </button>
             </div>
           </div>
         </div>

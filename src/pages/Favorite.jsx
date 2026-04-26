@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 /*import { BsHeartFill } from "react-icons/bs";*/
-import Header from "../components/Header";
+
 import Footer from "../components/Footer";
 import "../styles/results.css";
 
@@ -22,7 +22,6 @@ function Favorites() {
 
   return (
     <div className="results-page-wrapper">
-      <Header />
       
       <h2 className="results-heading">Mis Favoritos</h2>
 

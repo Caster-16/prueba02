@@ -3,6 +3,8 @@ import { FaBook, FaBookOpen, FaStar, FaSkull, FaHeart, FaSmileWink, FaTheaterMas
 import { GiDragonHead } from "react-icons/gi";
 import "../styles/cards.css";
 
+const imagePath = (file) => `${import.meta.env.BASE_URL}images/${file}`;
+
 function Cards() {
     
     return (
@@ -74,7 +76,7 @@ function Cards() {
             <div className="card">
                 <div className="card-body">
                     <NavLink to="/results?genero=ficcion">
-                        <img src="/images/davinci.png" alt="Davinci" className="card-icon" />
+                        <img src={imagePath("davinci.png")} alt="Davinci" className="card-icon" />
                         <span className="cart-titulo">El Código Da Vinci</span>
                     </NavLink>
                 </div>
@@ -82,7 +84,7 @@ function Cards() {
             <div className="card">
                 <div className="card-body">
                     <NavLink to="/results?genero=fantasia">
-                        <img src="/images/pijama.jpg" alt="Pijama" className="card-icon" />
+                        <img src={imagePath("pijama.jpg")} alt="Pijama" className="card-icon" />
                         <span className="cart-titulo">El niño con el pijama de rayas</span>
                     </NavLink>
                 </div>
@@ -91,7 +93,7 @@ function Cards() {
             <div className="card">
                 <div className="card-body">
                     <NavLink to="/results?genero=suspenso">
-                        <img src="/images/1984.webp" alt="1984" className="card-icon" />
+                        <img src={imagePath("1984.webp")} alt="1984" className="card-icon" />
                         <span className="cart-titulo">1984</span>
                     </NavLink>
                 </div>
@@ -100,7 +102,7 @@ function Cards() {
             <div className="card">
                 <div className="card-body">
                     <NavLink to="/results?genero=romance">
-                        <img src="/images/cielo.jpg" alt="Cielo" className="card-icon" />
+                        <img src={imagePath("cielo.jpg")} alt="Cielo" className="card-icon" />
                         <span className="cart-titulo">El cielo es de color azul</span>
                     </NavLink>
                 </div>
@@ -109,7 +111,7 @@ function Cards() {
             <div className="card">
                 <div className="card-body">
                     <NavLink to="/results?genero=comedia">
-                        <img src="/images/eragon.webp" alt="Eragon" className="card-icon" />
+                        <img src={imagePath("eragon.webp")} alt="Eragon" className="card-icon" />
                         <span className="cart-titulo">Eragon</span>
                     </NavLink>
                 </div>
@@ -118,7 +120,7 @@ function Cards() {
             <div className="card">
                 <div className="card-body">
                     <NavLink to="/results?genero=drama">
-                        <img src="/images/after.webp" alt="After" className="card-icon" />
+                        <img src={imagePath("after.webp")} alt="After" className="card-icon" />
                         <span className="cart-titulo">After</span>
                     </NavLink>
                 </div>

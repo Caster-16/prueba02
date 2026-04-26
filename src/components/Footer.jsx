@@ -9,12 +9,12 @@ function Footer() {
 
     <footer className="footer">
       <ul>
-        <li><Link to="/">Home</Link></li>
-        <li><Link to="/productos">Productos</Link></li>
-        <li><Link to="/servicios">Servicios</Link></li>
+        <li><Link to="/">Inicio</Link></li>
+        <li><Link to="/productos">Explorar Libros</Link></li>
+        <li><Link to="/servicios">Favoritos</Link></li>
         <li><Link to="/acerca">Acerca de</Link></li>
       </ul>
-      <p>© 2026 Ciberbooks</p>
+      <p className="footer-texto">© 2026 Ciberbooks</p>
     </footer>
 
   );

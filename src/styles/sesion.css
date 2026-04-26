@@ -1,0 +1,206 @@
+.login-fondo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, var(--bg-app) 0%, var(--bg-card) 100%);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  padding: 20px;
+}
+
+.login-tarjeta {
+  background-color: var(--bg-card);
+  color: var(--text-main);
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 400px;
+  border: 1px solid var(--border);
+}
+
+.login-titulo {
+  text-align: center;
+  color: var(--text-main);
+  margin-bottom: 30px;
+  font-size: 28px;
+  font-weight: bold;
+  font-family: serif;
+}
+
+.login-alerta {
+  color: white;
+  background-color: #e74c3c;
+  padding: 12px 15px;
+  border-radius: 8px;
+  font-size: 14px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.login-grupo {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.login-grupo label {
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: var(--text-main);
+  font-size: 14px;
+}
+
+.login-input {
+  padding: 12px 15px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font-size: 16px;
+  background-color: var(--bg-app);
+  color: var(--text-main);
+  transition: border 0.3s ease;
+}
+
+.login-input:focus {
+  outline: none;
+  border-color: #a36666;
+  background-color: var(--bg-card);
+}
+
+.login-contenedor-password {
+  display: flex;
+  gap: 8px;
+}
+
+.login-input-password {
+  flex: 1;
+  padding: 12px 15px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font-size: 16px;
+  background-color: var(--bg-app);
+  color: var(--text-main);
+  transition: border 0.3s ease;
+}
+
+.login-input-password:focus {
+  outline: none;
+  border-color: #a36666;
+  background-color: var(--bg-card);
+}
+
+.login-boton-ojo {
+  padding: 0 12px;
+  font-size: 13px;
+  cursor: pointer;
+  border: 1px solid var(--border);
+  background: var(--bg-app);
+  color: var(--text-main);
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  font-weight: 600;
+}
+
+.login-boton-ojo:hover {
+  background: #a36666;
+  color: white;
+  border-color: #a36666;
+}
+
+.login-boton-principal {
+  width: 100%;
+  padding: 12px;
+  background-color: #a36666;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.login-boton-principal:hover:not(:disabled) {
+  background-color: #8b5555;
+}
+
+.login-boton-principal:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.login-divider {
+  text-align: center;
+  margin: 20px 0;
+  color: var(--text-main);
+  font-weight: 600;
+  position: relative;
+}
+
+.login-divider::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 45%;
+  height: 1px;
+  background-color: var(--border);
+}
+
+.login-divider::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 50%;
+  width: 45%;
+  height: 1px;
+  background-color: var(--border);
+}
+
+.login-boton-registro {
+  width: 100%;
+  padding: 12px;
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background 0.3s ease;
+  margin-bottom: 15px;
+}
+
+.login-boton-registro:hover {
+  background-color: #218838;
+}
+
+.login-boton-registro:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.login-enlace {
+  text-align: center;
+  margin-top: 15px;
+  color: var(--text-main);
+  font-size: 14px;
+}
+
+.login-enlace a {
+  color: #a36666;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.login-enlace a:hover {
+  text-decoration: underline;
+}
+
+.login-boton-principal:hover {
+  background-color: #8b5555;
+}
+
+.login-boton-principal:active {
+  transform: scale(0.98);
+}

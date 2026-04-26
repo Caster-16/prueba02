@@ -2,12 +2,13 @@ import { useEffect, useState } from "react";
 import "../styles/banner.css";
 import { NavLink } from "react-router-dom";
 
+const imagePath = (file) => `${import.meta.env.BASE_URL}images/${file}`;
 
 function Banner() {
     const imagenes = [ 
-        "/images/img1.png", 
-        "/images/img2.png", 
-        "/images/img3.png"
+        imagePath("img1.png"), 
+        imagePath("img2.png"), 
+        imagePath("img3.png")
     ]; // contenedor de imágenes en public/images
 
     const [indice, setIndice] = useState(0); // el indice va cambiando y muestra otra imagen
@@ -40,10 +41,7 @@ function Banner() {
                 </p>
                 <div className="banner-boton">
                     <NavLink to="/results" className="btn-explorar">
-                      Explorar
-                    </NavLink>
-                    <NavLink to="/results" className="btn-explorar">
-                      Crear
+                      Empezar ...
                     </NavLink>
                 </div>
             </div>

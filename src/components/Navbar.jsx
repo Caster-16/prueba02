@@ -39,16 +39,11 @@ function Navbar() {
                   <p>/</p>
 
                   <div className="contenido">
-                    <NavLink to="/acerca">
+                    <NavLink to="/sesion">
                       {/*<FaHouse />*/} 
-                      <span>Acerca</span>
+                      <span>Sign in</span>
                     </NavLink>
                   </div>
-                  {/*<NavLink to="/login">Login</NavLink> */}
-                  {/*<NavLink to="/carrito" className="cart-link">
-                  Carrito
-                  <span className="cart-badge">{itemCount}</span>
-                  </NavLink> */}
               </nav>
         </div>
     </header>

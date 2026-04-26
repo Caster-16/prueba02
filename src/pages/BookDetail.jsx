@@ -1,7 +1,7 @@
 import { useParams, useNavigate } from "react-router-dom";
 import { books } from "../data/books";
 import { useState, useEffect } from "react";
-import Header from "../components/Header";
+
 import Footer from "../components/Footer";
 import "../styles/book-detail.css";
 
@@ -65,7 +65,6 @@ function BookDetail() {
 
   return (
     <div className="results-page-wrapper">
-      <Header />
       
       <main className="book-detail-main">
        
@@ -78,7 +77,7 @@ function BookDetail() {
 
           <div className="detail-header-content">
             <span className="badge-genre">{libro.genero}</span>
-            <h1 className="detail-main-title">{libro.titulo}</h1>
+            <h1 className="detail-main-title">{libro.titulo}</h1> /**/
             <p className="detail-author-name">{libro.autor}</p>
             
             <div className="detail-stars-row">
@@ -89,9 +88,9 @@ function BookDetail() {
 
             <div className="detail-main-actions">
               <button className={`btn-fav-outline ${isFavorite ? 'active' : ''}`} onClick={toggleFavorite}>
-                {isFavorite ? '❤ En favoritos' : '♡ Añadir a favoritos'}
+                {isFavorite ? ' En favoritos' : 'Añadir a favoritos'}
               </button>
-              <button className="btn-read-now" onClick={() => navigate(`/reader/${libro.id}`)}>📖 Leer</button>
+              <button className="btn-read-now" onClick={() => navigate(`/reader/${libro.id}`)}> Leer</button>
             </div>
           </div>
         </div>

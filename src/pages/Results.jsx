@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import { books } from "../data/books";
 import { BsHeartFill , BsFillStarFill} from "react-icons/bs";
 
-import Header from "../components/Header";
+
 import Footer from "../components/Footer";
 import SearchBar from "../components/SearchBar";
 import "../styles/results.css";
@@ -69,7 +69,7 @@ function Results() {
 
   return (
     <div className="results-page-wrapper">
-      <Header />
+   
 
       <section className="search-section-bg">
         <SearchBar setSearch={setSearch} />

@@ -12,7 +12,7 @@ body.light-theme {
   
   --card-bg: #FFFFFF;
   --card-border: #E5E7EB;
-  /*--btn-bg: #0078d7;*/
+  
   --border: #cdc6b2;
   --bg: #FDFBF7;
   background: #eae7e3; /*color del fondo total de la pagina*/
@@ -36,7 +36,7 @@ body.dark-theme {
 
   --card-bg: #1e1e1e;
   --card-border: #444;
-  /*--btn-bg: #0078d7;*/
+  
   --border: #464646;
   --bg: #1F2937;
   background: #121212;
