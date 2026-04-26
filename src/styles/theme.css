@@ -19,6 +19,14 @@ body.light-theme {
   color: #2C2C2C;
 
   --btn-bg: #0078d7;
+  
+  /* Variables nuevas para CSS integrado */
+  --bg-card: #FFFFFF;
+  --text-main: #2C2C2C;
+  --text-soft: #6B7280;
+  --shadow-soft: 0 1px 3px rgba(0, 0, 0, 0.1);
+  --shadow-strong: 0 10px 25px rgba(0, 0, 0, 0.15);
+  --bg-app: #FDFBF7;
 }
 
 body.dark-theme {
@@ -35,6 +43,14 @@ body.dark-theme {
   color: #f9f9f9;
 
   --btn-bg: #0078d7;
+  
+  /* Variables nuevas para CSS integrado */
+  --bg-card: #1e1e1e;
+  --text-main: #FDFBF7;
+  --text-soft: #9CA3AF;
+  --shadow-soft: 0 1px 3px rgba(0, 0, 0, 0.3);
+  --shadow-strong: 0 10px 25px rgba(0, 0, 0, 0.5);
+  --bg-app: #1F2937;
 }
 
 .theme-toggle { 

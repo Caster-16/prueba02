@@ -1,0 +1,106 @@
+/* ================= ESTILOS COMPARTIDOS DE FAVORITOS Y UTILIDADES ================= */
+
+.star-item {
+  font-size: 2rem;
+  cursor: pointer;
+  color: #ccc;
+  transition: 0.2s;
+  background: none;
+  border: none;
+  padding: 0;
+}
+
+.star-item.active {
+  color: #ffc107;
+}
+
+.star-item:hover {
+  color: #ffb700;
+}
+
+.no-results-box {
+  text-align: center;
+  padding: 60px 20px;
+  color: var(--text-soft);
+  font-size: 1.1rem;
+}
+
+.results-page-wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.results-page-wrapper > main {
+  flex: 1;
+}
+
+.search-section-bg {
+  background: var(--bg-card);
+  border-bottom: 1px solid var(--border);
+}
+
+.results-header-info {
+  padding: 20px 50px;
+  border-bottom: 1px solid var(--border);
+}
+
+.results-heading {
+  font-size: 2rem;
+  margin: 0 0 10px 0;
+  color: var(--text-main);
+}
+
+.search-status {
+  color: var(--text-soft);
+  font-size: 0.95rem;
+}
+
+.filters-container h3 {
+  font-size: 1.1rem;
+  margin-top: 0;
+  margin-bottom: 20px;
+  color: var(--text-main);
+}
+
+.filters-container h4 {
+  font-size: 0.95rem;
+  margin: 0 0 10px 0;
+  color: var(--text-main);
+  font-weight: 600;
+}
+
+.btn-clear-filter {
+  background: none;
+  border: none;
+  color: var(--text-soft);
+  cursor: pointer;
+  font-size: 13px;
+  padding: 5px 0;
+  transition: color 0.2s;
+  width: 100%;
+  text-align: left;
+}
+
+.btn-clear-filter:hover {
+  color: var(--text-main);
+}
+
+.rating-tag {
+  font-weight: 600;
+  color: #f59e0b;
+  font-size: 0.9rem;
+}
+
+/* ================= FOOTER (NUEVO DISEÑO) ================= */
+.footer {
+  margin-top: auto;
+  padding: 30px 50px;
+  border-top: 1px solid var(--border);
+  display: flex;
+  justify-content: center;
+  color: var(--text-soft);
+  font-size: 13px;
+  letter-spacing: 1px;
+  background: var(--bg-card);
+}

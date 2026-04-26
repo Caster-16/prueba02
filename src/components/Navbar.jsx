@@ -2,8 +2,7 @@ import { NavLink } from "react-router-dom";
 /*import { FaHouse } from "react-icons/fa6";*/
 import { BsHouse } from "react-icons/bs";
 import { BsBook } from "react-icons/bs";
-import { BsHeartFill } from "react-icons/bs";
-//import { useCart } from "../context/CartContext";
+import { BsHeartFill } from "react-icons/bs";//import { useCart } from "../context/CartContext";
 import ThemeToggle from "./ThemeToggle";
 import "../styles/navbar.css";
 
@@ -22,7 +21,7 @@ function Navbar() {
                   <p>/</p>
 
                   <div className="contenido">
-                    <NavLink to="/productos">
+                    <NavLink to="/results">
                       <BsBook/> 
                       <span>Explorar libros </span>
                     </NavLink>
@@ -31,7 +30,7 @@ function Navbar() {
                   <p>/</p>
 
                   <div className="contenido">
-                    <NavLink to="/servicios">
+                    <NavLink to="/favorite">
                       <BsHeartFill/> 
                       <span>Favoritos </span>
                     </NavLink>

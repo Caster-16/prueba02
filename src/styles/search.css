@@ -1,0 +1,26 @@
+/* ================= BUSCADOR (MODERNO Y PROMINENTE) ================= */
+.search-container {
+  padding: 20px 0 40px;
+  display: flex;
+  justify-content: center;
+}
+
+.search-container input {
+  width: 85%;
+  max-width: 700px;
+  padding: 16px 30px;
+  border-radius: 50px;
+  border: 1px solid var(--border);
+  background-color: var(--bg-card);
+  color: var(--text-main);
+  font-size: 16px;
+  outline: none;
+  box-shadow: var(--shadow-soft);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.search-container input:focus {
+  width: 90%;
+  box-shadow: var(--shadow-strong);
+  border-color: #bbb;
+}

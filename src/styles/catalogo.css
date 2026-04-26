@@ -1,0 +1,50 @@
+/* ================= SECCIÓN CATÁLOGO (HOME) ================= */
+.catalogo-box {
+  padding: 30px 50px 50px; 
+}
+
+.titulo {
+  font-family: serif;
+  font-size: 2.2rem;
+  margin-top: 20px;
+  margin-bottom: 25px;
+  padding-left: 50px; 
+  margin-left: 0;
+}
+
+.grid-generos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.card-genero {
+  height: 140px;
+  border-radius: 20px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  box-shadow: var(--shadow-soft);
+}
+
+.card-genero:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-strong);
+}
+
+.overlay {
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(1px);
+  width: 100%; height: 100%;
+  display: flex; align-items: center; justify-content: center;
+  transition: background 0.3s;
+}
+
+.card-genero:hover .overlay { background: rgba(255, 255, 255, 0.4); }
+
+body.dark-theme .overlay { background: rgba(0, 0, 0, 0.5); }
+.overlay p { font-weight: bold; font-size: 1.1rem; color: #1a1a1a; }
+body.dark-theme .overlay p { color: #fff; }

@@ -1,0 +1,95 @@
+/* ================= COMPONENTE LECTOR ================= */
+.reader-container {
+  padding: 20px 60px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.reader-nav {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.reader-content-layout {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 60px;
+}
+
+.reader-mini-cover {
+  width: 100%;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 40px;
+}
+
+.reader-text-area {
+  background: white;
+  padding: 40px;
+  border-radius: 20px;
+}
+
+body.dark-theme .reader-text-area {
+  background: var(--bg-card);
+}
+
+/* Estilo de la primera letra (Letra Capitular) */
+.fragmento-texto::first-letter {
+  font-family: serif;
+  font-size: 4rem;
+  float: left;
+  margin-right: 10px;
+  line-height: 1;
+  color: #a36666;
+}
+
+.reader-text-body p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #333;
+  text-align: justify;
+  margin-bottom: 15px;
+}
+
+body.dark-theme .reader-text-body p {
+  color: var(--text-main);
+}
+
+/* Banner de continuar leyendo */
+.continue-reading-banner {
+  margin-top: 50px;
+  background: #fdfaf5;
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+body.dark-theme .continue-reading-banner {
+  background: var(--bg-card);
+}
+
+.btn-go-full {
+  background: #4a3728;
+  color: white;
+  text-decoration: none;
+  padding: 15px 25px;
+  border-radius: 12px;
+  font-weight: bold;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: 0.3s;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-go-full:hover {
+  background: #2a1f17;
+  transform: translateY(-2px);
+}

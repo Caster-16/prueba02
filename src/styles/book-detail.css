@@ -1,0 +1,164 @@
+/* ================= DETALLE DE LIBRO ================= */
+.book-detail-main {
+  padding: 30px 60px; 
+}
+
+.btn-back-link {
+  background: none;
+  border: none;
+  color: var(--text-soft);
+  cursor: pointer;
+  font-size: 14px;
+  margin-bottom: 25px;
+  padding: 0;
+}
+
+.btn-back-link:hover {
+  color: var(--text-main);
+}
+
+/* Sección de arriba (Portada e Info) */
+.detail-hero-section {
+  display: flex;
+  gap: 60px;
+  margin-bottom: 40px;
+}
+
+.detail-cover-container img {
+  width: 320px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.detail-header-content {
+  flex: 1;
+}
+
+.badge-genre {
+  background: #f5e6e6;
+  color: #a36666;
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-size: 12px;
+  display: inline-block;
+  margin-bottom: 15px;
+}
+
+.detail-main-title {
+  font-size: 2.8rem;
+  font-family: serif;
+  margin: 15px 0;
+}
+
+.detail-author-name {
+  font-size: 1.3rem;
+  color: var(--text-soft);
+  margin-bottom: 20px;
+}
+
+.detail-stars-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+  font-size: 0.9rem;
+}
+
+.rating-number {
+  font-weight: bold;
+}
+
+.reviews-count {
+  color: var(--text-soft);
+}
+
+/* Ficha técnica debajo de los botones */
+.detail-specs-grid {
+  display: flex;
+  gap: 40px;
+  margin-top: 40px;
+  border-top: 1px solid var(--border);
+  padding-top: 25px;
+}
+
+.spec-item {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.spec-label {
+  font-size: 12px;
+  color: var(--text-soft);
+}
+
+.spec-value {
+  font-weight: bold;
+  font-size: 14px;
+}
+
+/* Tarjetas de información */
+.detail-info-card {
+  background: var(--bg-card);
+  padding: 30px;
+  border-radius: 20px;
+  margin-bottom: 25px;
+  box-shadow: var(--shadow-soft);
+}
+
+.detail-info-card h3 {
+  margin-bottom: 15px;
+  font-family: serif;
+  font-size: 1.4rem;
+}
+
+/* Botones principales */
+.detail-main-actions {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.btn-read-now {
+  background-color: #4a3728;
+  color: white;
+  padding: 12px 30px;
+  border-radius: 12px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: background 0.3s ease;
+}
+
+.btn-read-now:hover {
+  background-color: #36281d;
+}
+
+.btn-fav-outline {
+  background: white;
+  border: 1px solid var(--border);
+  padding: 12px 25px;
+  border-radius: 12px;
+  cursor: pointer;
+  color: var(--text-main);
+  transition: 0.3s;
+}
+
+body.dark-theme .btn-fav-outline {
+  background: var(--bg-card);
+  color: var(--text-main);
+}
+
+.btn-fav-outline:hover {
+  border-color: #a36666;
+  color: #a36666;
+}
+
+.btn-fav-outline.active {
+  background-color: #ff4d4d;
+  color: white;
+  border-color: #ff4d4d;
+}
