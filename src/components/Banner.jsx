@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import "../styles/banner.css";
+import { NavLink } from "react-router-dom";
 
 
 function Banner() {
@@ -32,19 +33,19 @@ function Banner() {
                     Tus historias, tu mundo.
                 </h2>
                 <p className="banner-parrafo"> 
-                    Lorem ipsum dolor sit amet consectetur, 
-                    adipisicing elit. Aperiam officiis a id maxime. 
-                    Ut ea maiores iure, neque dolorum pariatur minus 
-                    nobis rerum inventore dolorem officia a quae quis voluptas.
+                    Miles de mundos esperan entre estas páginas.
+                </p>
+                <p className="banner-parrafo">
+                    Deja que la lectura te encuentre.
                 </p>
                 <div className="banner-boton">
-                    <button >
-                        Explorar
-                    </button>
-                    <button>
-                        Crear
-                    </button>
-            </div>
+                    <NavLink to="/results" className="btn-explorar">
+                      Explorar
+                    </NavLink>
+                    <NavLink to="/results" className="btn-explorar">
+                      Crear
+                    </NavLink>
+                </div>
             </div>
             
         </div>

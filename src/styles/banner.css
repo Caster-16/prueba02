@@ -51,21 +51,39 @@
   justify-content: center;
   gap: 12px;
   margin-top: auto;
+  text-decoration: none;
   z-index: 3; /*le asignamos un orden de capa*/
 }
 
-.banner-boton button {
+
+/*.banner-boton button {
   position:relative;
   background-color: #e5b56e;
-  color: white;
+  color: var(--text-color);
   border: none;
   border-radius: 5px;
   cursor: pointer;
   padding: 10px 20px;
+}*/
+
+.btn-explorar {
+  display: inline-block; 
+  background-color: #e5b56e;
+
+  color: var(--text-color);
+  text-decoration: none;
+
+  padding: 2px 6px;
+  border-radius: 10px;
+
+  font-size: 12px;
+  font-weight: 200;
+  cursor: pointer;
 }
 
-.banner-boton button:hover {
+.btn-explorar:hover {
   background-color: #3b4d8a;
+  transform: translateY(-1px);
 }
 
 

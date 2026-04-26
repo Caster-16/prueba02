@@ -69,12 +69,13 @@ function Cards() {
         <div className="titulo-contenedor">
             <h2 className="titulo-cards">Libros recomendados</h2>
         </div>
+
         <div className="cards-contenedor">
             <div className="card">
                 <div className="card-body">
                     <NavLink to="/results?genero=ficcion">
                         <img src="/images/davinci.png" alt="Davinci" className="card-icon" />
-                        <span>Ficcion</span>
+                        <span className="cart-titulo">El Código Da Vinci</span>
                     </NavLink>
                 </div>
             </div>
@@ -82,7 +83,7 @@ function Cards() {
                 <div className="card-body">
                     <NavLink to="/results?genero=fantasia">
                         <img src="/images/pijama.jpg" alt="Pijama" className="card-icon" />
-                        <span>Fantasía</span>
+                        <span className="cart-titulo">El niño con el pijama de rayas</span>
                     </NavLink>
                 </div>
             </div>
@@ -91,7 +92,7 @@ function Cards() {
                 <div className="card-body">
                     <NavLink to="/results?genero=suspenso">
                         <img src="/images/1984.webp" alt="1984" className="card-icon" />
-                        <span>Suspenso</span>
+                        <span className="cart-titulo">1984</span>
                     </NavLink>
                 </div>
             </div>
@@ -100,7 +101,7 @@ function Cards() {
                 <div className="card-body">
                     <NavLink to="/results?genero=romance">
                         <img src="/images/cielo.jpg" alt="Cielo" className="card-icon" />
-                        <span>Romance</span>
+                        <span className="cart-titulo">El cielo es de color azul</span>
                     </NavLink>
                 </div>
             </div>
@@ -109,7 +110,7 @@ function Cards() {
                 <div className="card-body">
                     <NavLink to="/results?genero=comedia">
                         <img src="/images/eragon.webp" alt="Eragon" className="card-icon" />
-                        <span>Comedia</span>
+                        <span className="cart-titulo">Eragon</span>
                     </NavLink>
                 </div>
             </div>
@@ -118,7 +119,7 @@ function Cards() {
                 <div className="card-body">
                     <NavLink to="/results?genero=drama">
                         <img src="/images/after.webp" alt="After" className="card-icon" />
-                        <span>Drama</span>
+                        <span className="cart-titulo">After</span>
                     </NavLink>
                 </div>
             </div>

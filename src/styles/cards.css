@@ -71,3 +71,9 @@ img.card-icon {
     border-radius: 4px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
+
+.cart-titulo {
+    font-size: 10px;
+    font-weight: bold;
+    color: var(--text-color);
+}
