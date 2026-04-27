@@ -53,7 +53,7 @@ function ReaderPreview() {
                   </div>
                </div>
                <button className="btn-read-now" onClick={() => navigate(`/tienda/${id}`)}>
-                  Para continuar leyendo haz click aquí
+                  Para saber dónde conseguir el libro haz click aquí
               </button>
             </div>
           </div>

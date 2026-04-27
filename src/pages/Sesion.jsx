@@ -1,15 +1,22 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import axios from 'axios';
 import '../styles/sesion.css';
-import { validarUsuario } from '../services/usersService';
+
+const API_URL = "http://localhost:3001/usuarios";
 
 const Login = () => {
   const navigate = useNavigate();
-  const [datos, setDatos] = useState({ usuario: '', password: '' });
+
+  const [datos, setDatos] = useState({
+    email: '',
+    password: ''
+  });
+
   const [error, setError] = useState(false);
+  const [mensajeError, setMensajeError] = useState('');
   const [verPassword, setVerPassword] = useState(false);
   const [cargando, setCargando] = useState(false);
-  const [mensajeError, setMensajeError] = useState('');
 
   const manejarCambio = (e) => {
     setDatos({
@@ -20,33 +27,40 @@ const Login = () => {
 
   const iniciarSesion = async (e) => {
     e.preventDefault();
-    if (datos.usuario.trim() === '' || datos.password.trim() === '') {
+
+    if (!datos.email.trim() || !datos.password.trim()) {
       setError(true);
       setMensajeError('Por favor, llena todos los campos');
       return;
     }
+
     setError(false);
     setCargando(true);
     setMensajeError('');
 
     try {
-      // Validar las credenciales con axios
-      const usuarioEncontrado = await validarUsuario(datos.usuario, datos.password);
-      
-      if (usuarioEncontrado) {
-        // Guardar usuario en localStorage para sesión
-        localStorage.setItem('usuarioActual', JSON.stringify(usuarioEncontrado));
-        alert(`¡Bienvenido ${usuarioEncontrado.nombre}!`);
-        // Redirigir a página principal
-        navigate('/');
+      //  Buscar usuario en db.json
+      const res = await axios.get(
+        `${API_URL}?email=${datos.email}&password=${datos.password}`
+      );
+
+      if (res.data.length > 0) {
+        const usuario = res.data[0];
+
+        // Guardar sesión
+        localStorage.setItem('usuarioActual', JSON.stringify(usuario));
+
+        alert(`¡Bienvenido ${usuario.nombre}!`);
+        navigate('/perfil');
       } else {
         setError(true);
-        setMensajeError('Usuario o contraseña incorrectos. Por favor, verifica tus datos.');
+        setMensajeError('Correo o contraseña incorrectos');
       }
+
     } catch (err) {
-      console.error('Error al iniciar sesión:', err);
+      console.error(err);
       setError(true);
-      setMensajeError('Hubo un error al intentar conectarte. Intenta de nuevo más tarde.');
+      setMensajeError('Error al conectar con el servidor');
     } finally {
       setCargando(false);
     }
@@ -55,21 +69,24 @@ const Login = () => {
   return (
     <div className="login-fondo">
       <form onSubmit={iniciarSesion} className="login-tarjeta">
-        <h2 className="login-titulo">Iniciar Sesión</h2>
-        
-        {error && <p className="login-alerta">{mensajeError || 'Por favor, llena todos los campos'}</p>}
 
+        <h2 className="login-titulo">Iniciar Sesión</h2>
+
+        {error && <p className="login-alerta">  {mensajeError}</p>}
+
+        {/* EMAIL */}
         <div className="login-grupo">
-          <label>Usuario</label>
+          <label>Email</label>
           <input
-            name="usuario"
-            type="text"
-            placeholder="Tu nombre de usuario"
+            name="email"
+            type="email"
+            placeholder="ejemplo@correo.com"
             onChange={manejarCambio}
             className="login-input"
           />
         </div>
 
+        {/* PASSWORD */}
         <div className="login-grupo">
           <label>Contraseña</label>
           <div className="login-contenedor-password">
@@ -90,9 +107,15 @@ const Login = () => {
           </div>
         </div>
 
-        <button type="submit" className="login-boton-principal" disabled={cargando}>
+        {/* BOTÓN LOGIN */}
+        <button 
+          type="submit" 
+          className="login-boton-principal" 
+          disabled={cargando}
+        >
           {cargando ? 'Conectando...' : 'Ingresar'}
         </button>
+
 
         <div className="login-divider">o</div>
 
@@ -104,7 +127,17 @@ const Login = () => {
           Registrarte
         </button>
 
-        <p className="login-enlace">¿No tienes cuenta? <a href="/registro">Crea una aquí</a></p>
+        {/* LINK EXTRA */}
+        <p className="login-enlace">
+          ¿No tienes cuenta?{" "}
+          <span 
+            onClick={() => navigate('/registro')} 
+            style={{ cursor: 'pointer', color: '#aa3bff' }}
+          >
+            Crea una aquí
+          </span>
+        </p>
+
       </form>
     </div>
   );

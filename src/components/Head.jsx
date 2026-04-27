@@ -5,6 +5,8 @@ import ThemeToggle from "./ThemeToggle";
 import "../styles/head.css";
 
 function Head() {
+      const usuario = JSON.parse(localStorage.getItem("usuarioActual"));
+
   return (
     <header className="head"> {/* contiene la barra de navegación */}
         <div className="logo"> {/* contenedor para el logo */}
@@ -15,7 +17,7 @@ function Head() {
 
         <div className="right" > {/* contiene el perfil y el boton de tema */}
             
-            <NavLink className="perfil" to="/perfil">
+            <NavLink className="perfil" to={usuario ? "/perfil" : "/sesion"}> {/* si hay usuario, va a perfil, sino a sesion */}
                 <FaUser /> {/* icono del usuario */}
                 <span>Perfil</span>
             </NavLink>

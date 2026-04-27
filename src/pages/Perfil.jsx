@@ -1,76 +1,82 @@
+import React, { useEffect, useState } from 'react';
+import { FaUser } from "react-icons/fa";
+import { useNavigate } from 'react-router-dom';
 import "../styles/perfil.css";
 
 export default function Perfil() {
+
+  const [usuario, setUsuario] = useState(null);
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const userGuardado = localStorage.getItem('usuarioActual');
+
+    if (userGuardado) {
+      setUsuario(JSON.parse(userGuardado));
+    }
+  }, []);
+
+  // función para cerrar sesión
+  const cerrarSesion = () => {
+    localStorage.removeItem('usuarioActual');
+    navigate('/sesion');
+  };
+
+  if (!usuario) {
+    return <p style={{ textAlign: "center" }}>No hay sesión activa</p>;
+  }
+
   return (
-    <main className="container">
-        <div className="main-body">
+    <div className="perfil-wrapper">
+      <div className="container">
+        <div className="row">
 
-            {/* contenedor  */}
-            <div className="row">
-                {/* primer subcontenedor*/}
-                <section className="col left">
-                    <div className="card">
-                        <div className="card-body center">
-                            <img
-                            src="https://bootdey.com/img/Content/avatar/avatar7.png"
-                            alt="avatar"
-                            className="avatar"
-                            />
-                            <h4>John Doe</h4>
-                            <p>Full Stack Developer</p>
-                            <p className="muted">San Francisco</p>
-                            <button className="btn primary">Follow</button>
-                            <button className="btn outline">Message</button>
-                        </div>
-                    </div>
-                    {/* segundo subcontenedor*/}
-                    <div className="card">
-                        <ul className="list">
-                            <li><strong>Website:</strong> bootdey.com</li>
-                            <li><strong>Github:</strong> bootdey</li>
-                            <li><strong>Twitter:</strong> @bootdey</li>
-                            <li><strong>Instagram:</strong> bootdey</li>
-                        </ul>
-                    </div>
-                </section>
-
-                {/* Contenedor a la derecha */}
-                <section className="col right">
-                    <div className="card">
-                        <div className="card-body">
-                            <div className="info"><strong>Name:</strong> Kenneth</div>
-                            <div className="info"><strong>Email:</strong> test@mail.com</div>
-                            <div className="info"><strong>Phone:</strong> 999999999</div>
-                            <div className="info"><strong>Address:</strong> Perú</div>
-                        </div>
-                    </div>
-
-                    <div className="card">
-                        <div className="card-body">
-                            <h4>Skills</h4>
-
-                            <div className="progress">
-                            <span>Web Design</span>
-                            <div className="bar"><div style={{width: "80%"}} /></div>
-                            </div>
-
-                            <div className="progress">
-                            <span>React</span>
-                            <div className="bar"><div style={{width: "70%"}} /></div>
-                            </div>
-
-                            <div className="progress">
-                            <span>Backend</span>
-                            <div className="bar"><div style={{width: "60%"}} /></div>
-                            </div>
-
-                        </div>
-                    </div>
-
-                </section>
+          {/* IZQUIERDA */}
+          <aside className="col-izquierda">
+            <div className="tarjeta">
+              <div className="tarjeta-cuerpo centrado">
+                <FaUser className="img-avatar" />
+                <h3>{usuario.nombre}</h3>
+                <p style={{ color: 'var(--text-muted)' }}>{usuario.email}</p>
+              </div>
             </div>
 
+            <div className="tarjeta">
+              <ul className="lista-redes">
+                <li><strong>Cuenta:</strong> <span>Activa</span></li>
+              </ul>
+            </div>
+
+            <button 
+              onClick={cerrarSesion}
+              className="perfil-boton-logout"
+            >
+              Cerrar sesión
+            </button>
+
+          </aside>
+
+          {/* DERECHA */}
+          <section className="col-derecha">
+            <div className="tarjeta">
+              <div className="tarjeta-cuerpo">
+                <div className="info-item">
+                  <strong>Nombre:</strong> <span>{usuario.nombre}</span>
+                </div>
+
+                <div className="info-item">
+                  <strong>Email:</strong> <span>{usuario.email}</span>
+                </div>
+
+                <div className="info-item">
+                  <strong>ID:</strong> <span>{usuario.id}</span>
+                </div>
+              </div>
+            </div>
+          </section>
+
         </div>
-    </main>
+      </div>
+    </div>
   );
 }

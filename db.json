@@ -1,16 +1,29 @@
 {
   "usuarios": [
     {
-      "id": 1,
+      "id": "1",
       "nombre": "Juan Pérez",
-      "email": "juan@example.com",
+      "email": "juan@gmail.com",
       "password": "password123"
     },
     {
-      "id": 2,
+      "id": "2",
       "nombre": "María García",
-      "email": "maria@example.com",
+      "email": "maria@gmail.com",
       "password": "pass456"
+    },
+    {
+      "nombre": "Alberto",
+      "email": "castilloteranalberto@gmail.com",
+      "password": "1234",
+      "id": "mdUx2CoC0d8"
+    },
+    {
+      "nombre": "Rodrigo",
+      "email": "rodrigoulloa31@gmail.com",
+      "password": "12345",
+      "id": "DqUpJIaDKBA"
     }
-  ]
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
 }

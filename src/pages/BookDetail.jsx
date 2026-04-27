@@ -1,7 +1,7 @@
 import { useParams, useNavigate } from "react-router-dom";
 import { books } from "../data/books";
 import { useState, useEffect } from "react";
-
+import { FaStar } from "react-icons/fa";
 import Footer from "../components/Footer";
 import "../styles/book-detail.css";
 
@@ -77,13 +77,21 @@ function BookDetail() {
 
           <div className="detail-header-content">
             <span className="badge-genre">{libro.genero}</span>
-            <h1 className="detail-main-title">{libro.titulo}</h1> /**/
+            <h1 className="detail-main-title">{libro.titulo}</h1> 
             <p className="detail-author-name">{libro.autor}</p>
             
             <div className="detail-stars-row">
-              {"⭐".repeat(Math.floor(libro.valoracion || 5))} 
-              <span className="rating-number">{libro.valoracion || 5}.0</span>
-              <span className="reviews-count">| {12548 + savedReviews.length} reseñas</span>
+                {Array.from({ length: Math.floor(libro.valoracion || 5) }).map((_, i) => (
+                  <FaStar key={i} className="star-icon" />
+                ))}
+
+                <span className="rating-number">
+                  {libro.valoracion || 5}.0
+                </span>
+
+                <span className="reviews-count">
+                  | {12548 + savedReviews.length} reseñas
+                </span>
             </div>
 
             <div className="detail-main-actions">
